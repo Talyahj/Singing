@@ -2,6 +2,7 @@
 // DB Connection
 include "../modele/db.php"; 
 include "../modele/database.php";
+include "../vue/artistes.html"; 
 
 // If form submitted to add an album
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_album'])) {
@@ -16,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_album'])) {
     exit();
 }
 
-// If form submitted to delete an album
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_album'])) {
     $album_id = $_POST['album_id'];
 
@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_album'])) {
 // Fetch all albums
 $albums = getAlbums();
 
-// Load the view
-include "vue/admin_albums.php";
+include "../vue/admin_albums.php";
+
+
 ?>

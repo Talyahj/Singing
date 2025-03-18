@@ -21,7 +21,6 @@ if(isset($_POST['pseudoU'], $_POST['mailU'], $_POST['mdpU'])) {
             if($count_pseudo > 0) {
                 echo "<script>alert('Ce pseudo est déjà utilisé. Veuillez en choisir un autre.'); window.location.href = '../vue/vueInscription.php';</script>";
             } else {
-                // Vérifier si le compte existe déjà avec cette adresse email
                 $requete_verif_compte = $bdd->prepare("SELECT COUNT(*) FROM utilisateur WHERE mailU = :mailU");
                 $requete_verif_compte->execute(array("mailU" => $mailU));
                 $count_compte = $requete_verif_compte->fetchColumn();
@@ -29,7 +28,6 @@ if(isset($_POST['pseudoU'], $_POST['mailU'], $_POST['mdpU'])) {
                 if($count_compte > 0) {
                     echo "<script>alert('Un compte existe déjà avec cette adresse email.'); window.location.href = '../vue/vueInscription.php';</script>";
                 } else {
-                    // Tout est bon, on peut insérer dans la base de données
                     $requete = $bdd->prepare("INSERT INTO utilisateur (mailU, mdpU, pseudoU) VALUES (:mailU, :mdpU, :pseudoU)");
                     $requete->execute(array(
                         "mailU" => $mailU,

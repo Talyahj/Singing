@@ -43,3 +43,10 @@ INSERT INTO utilisateur (mailU, mdpU, pseudoU, userType) VALUES
 ('comeandgetit@gmail.com', 'TJ', 'bonjour', 'admin');
 
 
+CREATE TABLE panier (
+    idPanier INT AUTO_INCREMENT PRIMARY KEY,
+    mailU VARCHAR(150),
+    idAlbum INT,
+    FOREIGN KEY(mailU) REFERENCES utilisateur(mailU),
+    FOREIGN KEY(idAlbum) REFERENCES albums(idAlbum)
+);

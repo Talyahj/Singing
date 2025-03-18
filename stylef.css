@@ -1,0 +1,141 @@
+*{
+   margin: 0;
+   padding: 0;
+   background-color:  #ffffff;
+}
+.navbar-top{
+   width: 100%;
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   text-align: center;
+   justify-content: space-between;
+}
+.search-bar input {
+   padding: 7px 10px;
+   border-radius: 15px;
+   border: 1px solid #ccc;
+   width: 220px;
+}
+.search-bar {
+   margin-top: 10px;
+
+}
+
+@media screen and (max-width: 400px) {
+.search-bar input {
+   width: 100%; 
+}
+}
+
+.logo img {
+   max-width: 100%;
+   height: auto;
+   margin-right: 100px;
+}
+.icons a img{
+   margin-left: 10px;
+   cursor: pointer;
+}
+
+@media screen  and (max-width:400px) {
+   .icons a img{
+       width: 20px;
+   }
+}
+
+.bg-bisque {
+   background-color: #ffffff;
+   border-bottom: 3px solid #a56d86;
+}
+
+.main-content{
+   width: 100%;
+   height: 53vh;
+   background-color: #ffffff;
+   border-top: 3px solid #a56d86;
+   border-bottom: 3px solid #a56d86;
+}
+
+.nav-link{
+   margin-left: 50px;
+   text-align: center;
+   font-weight: bold;
+   color:  #a56d86;
+}
+
+.content{
+   padding: 110px;
+}
+.content h1{
+   font-size: 6rem;
+   font-weight: 700;
+   text-align: center;
+   color: #a56d86;
+   margin-left: 40px;
+}
+@media screen  and (max-width:400px) {
+   .content h1{
+       font-size: 30px;
+   }
+}
+
+form {
+   margin: 50px;
+}
+label {
+   display: block;
+   margin: 10px 0;
+   color: #333;
+   font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+
+textarea {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+button{
+   background-color: #8f4e4e;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   display: block !important;
+}
+
+button:hover {
+   background-color: #623232;
+}
+
+.footer {
+   background-color: #ffffff; 
+   padding: 30px 0; 
+   text-align: center;
+}
+
+.footer ul {
+   list-style: none;
+   padding: 0;
+}
+
+.footer ul li {
+   display: inline;
+   margin-right: 20px; 
+}
+
+.footer ul li a {
+   text-decoration: none;
+  color: #555; 
+}
+
+.footer ul li a:hover {
+   color: #333;
+}
